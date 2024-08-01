@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Webapp</title>
+
+<style>
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    width: 100%;
+    height: 100vh;
+    background-color: #073b3b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 400px;
+    height: 80vh;
+    background-color: #184563;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.3);
+}
+
+.upper-data {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 50%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.lower-data {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 50%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.upper-data img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.weather-data {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.location {
+    color: #ffffff;
+    text-align: center;
+    font-size: 2em;
+}
+
+.temperature {
+    color: #ffffff;
+    font-size: 3em;
+    text-align: center;
+    font-weight: 900;
+}
+
+.more-info-label {
+    color: #ffffff;
+}
+
+.more-info-container {
+    flex: 1;
+    background-color: rgba(225,225,225,0.1);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-top: 1em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.info-block {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+}
+
+.info-block-label {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-block-label img {
+    width: 2.2em;
+    border-radius: 10px;
+}
+
+.info-block-label span {
+    color: #ffffff;
+    font-size: 0.8em;
+}
+
+.info-block-value {
+    width: 50%;
+    display: flex;
+    font-size: 1.1em;
+    justify-content: flex-start;
+    align-items: center;
+    color: #ffffff;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="upper-data">
+
+    <div class="weather-data">
+      <div class="location">Ankara</div>
+      <div class="temperature">12°C</div>
+    </div>
+  </div>  
+  <div class="lower-data">
+    <div class="more-info-label">
+      Location Detail:
+    </div>
+
+    <div class="more-info-container">
+      <div class="info-block">
+        <div class="info-block-label">
+          <span>min</span>
+        </div>
+        <div class="info-block-value">
+          -2°C
+        </div>
+      </div>
+
+      <div class="info-block">
+        <div class="info-block-label">
+          <span>max</span>
+        </div>
+        <div class="info-block-value">
+          12°C
+        </div>
+      </div>
+
+      <div class="info-block">
+        <div class="info-block-label">
+          <span>humidity</span>
+        </div>
+        <div class="info-block-value">
+          42%
+        </div>
+      </div>
+
+      <div class="info-block">
+        <div class="info-block-label">
+          <span>wind</span>
+        </div>
+        <div class="info-block-value">
+          12 km/h
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
